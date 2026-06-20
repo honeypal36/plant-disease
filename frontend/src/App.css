@@ -1,0 +1,19 @@
+.container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.preview {
+  width: 300px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 20px;
+}
