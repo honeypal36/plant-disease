@@ -69,7 +69,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/predict",
+        "https://plant-disease-tan.vercel.app/",
         {
           method: "POST",
           body: formData,
