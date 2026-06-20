@@ -4,8 +4,19 @@ import numpy as np
 from io import BytesIO
 from PIL import Image
 import tensorflow as tf
+from fastapi.middleware.cors import CORSMiddleware
 
 app=FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://plant-disease-tan.vercel.app"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 MODEL=tf.keras.models.load_model("../models/1.keras")
 MODEL.export("../models/plants_model/1")
